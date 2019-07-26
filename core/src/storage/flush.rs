@@ -42,6 +42,8 @@ pub trait Flush {
     fn flush(&mut self);
 }
 
+use core::env::srml::types::{AccountId, Hash};
+
 macro_rules! impl_empty_flush_for {
 	( $($ty:ty),* ) => {
 		$(
@@ -55,7 +57,7 @@ macro_rules! impl_empty_flush_for {
 impl_empty_flush_for! {
     u8, u16, u32, u64, u128, usize,
     i8, i16, i32, i64, i128, isize,
-    bool, char, str
+    bool, char, str, AccountId, Hash,
 }
 
 macro_rules! impl_tuple_flush_for {

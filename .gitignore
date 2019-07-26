@@ -1,5 +1,6 @@
 # Ignore build artifacts from the local tests sub-crate.
 /target/
+/cli/target/
 /core/target/
 /model/target/
 /lang/target/
@@ -21,3 +22,6 @@ Cargo.lock
 
 # Ignore history files.
 **/.history/**
+
+# MacOS
+.DS_Store
